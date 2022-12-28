@@ -17,7 +17,12 @@ The scripts were written by me. I used python2.7 and libraries like socket, argp
 * Cheacker Site
 * Port Scanner
 * Sniffer
+
 ## Requirments
+* Python2.7
+* Argparse
+* Threading
+* Socket
 
 ## Instalation
     git clone https://github.com/Sponton1x/Netpy
