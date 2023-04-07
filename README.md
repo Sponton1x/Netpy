@@ -1,7 +1,7 @@
 # Netpy
 
 ## The Network Python Package Tools
-The scripts were written by me. I used python2.7 and libraries like socket, argparse, threading and something like that. <br> <br>
+The scripts were written by me. I used python3 and libraries like socket, argparse, scapy and something like that. <br> <br>
 
 <div>
   <img src="https://img.shields.io/badge/Build%20With-Python3-green?style=for-the-badge&logo=appveyor"/>
