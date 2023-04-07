@@ -4,7 +4,7 @@
 The scripts were written by me. I used python2.7 and libraries like socket, argparse, threading and something like that. <br> <br>
 
 <div>
-  <img src="https://img.shields.io/badge/Build%20With-Python2-green?style=for-the-badge&logo=appveyor"/>
+  <img src="https://img.shields.io/badge/Build%20With-Python3-green?style=for-the-badge&logo=appveyor"/>
   <img src="https://img.shields.io/github/v/tag/Sponton1x/Netpy?style=for-the-badge"/>
   <img src="https://img.shields.io/github/release-date/Sponton1x/Netpy?style=for-the-badge"/>
   <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en"><img src="https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue?style=for-the-badge&logo=appveyor"/></a>
