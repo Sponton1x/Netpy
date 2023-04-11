@@ -1,5 +1,5 @@
+#! /usr/bin/python3
 # network_topology.py
-# /usr/bin/python3
 
 import argparse
 from scapy.all import ARP, Ether, srp

@@ -1,5 +1,7 @@
-from scapy.all import *
+#! usr/bin/python3
+# monitor_traffic_network.py
 
+from scapy.all import *
 
 def packet_callback(packet):
     print(packet.summary())

@@ -1,5 +1,5 @@
+#! /usr/bin/python3
 # ssh_brute.py
-# /usr/bin/python3
 
 import argparse
 import paramiko

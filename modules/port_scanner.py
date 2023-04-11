@@ -1,5 +1,5 @@
-# port_scanner.py
 #! usr/bin/python3
+# port_scanner.py
 
 import socket, sys
 
