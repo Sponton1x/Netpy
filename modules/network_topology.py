@@ -13,8 +13,11 @@ def run(args):
 
     clients = []
     for sent, received in result:
-        clients.append({'ip': received.psrc, 'mac': received.hwsrc})
-
+        try:
+            clients.append({'ip': received.psrc, 'mac': received.hwsrc})
+        except Exception as e:
+            print(f"Error: {e}")
+            sys.exit()
     print("Scanning network...")
     print("IP\t\t\tMAC Address")
     print("-------------------------------------------")

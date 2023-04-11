@@ -1,25 +1,29 @@
 # port_scanner.py
-# usr/bin/python3
+#! usr/bin/python3
 
-import socket
+import socket, sys
 
 def run(args):
     print(f'Scanning ports {args.ports} on {args.target}...')
-    ports_list = parse_ports(args.ports)
+    try:
+        ports_list = parse_ports(args.ports)
+    except Exception as e:
+        print(e)
+        sys.exit()
+
     for port in ports_list:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)
         try:
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(1)
             result = sock.connect_ex((args.target, port))
-            if result == 0:
-                print(f'Port {port} is open')
-            else:
-                print(f'Port {port} is closed')
-                sock.close()
-        except KeyboardInterrupt:
-            exit()
-        except socker.error:
-            print(f"\nCould not connect to port {port}")
+        except Exception as e:
+            print(f"Error: {e}")
+            sys.exit()
+        if result == 0:
+            print(f'Port {port} is open')
+        else:
+            print(f'Port {port} is closed')
+            sock.close()
 
 def parse_ports(ports):
     ports_list = []

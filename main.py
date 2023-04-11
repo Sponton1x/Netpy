@@ -3,10 +3,11 @@
 
 import argparse
 from modules import port_scanner, ssh_brute, monitor_traffic_network, network_topology, sniffer
+from config.config import load_animation
 
 if __name__ == '__main__':
+    load_animation()
     parser = argparse.ArgumentParser(description="The Network Python Package Tools")
-
     subparsers = parser.add_subparsers(help='sub-command help')
 
     port_scan_parser = subparsers.add_parser('port-scan', help='port scanning help')

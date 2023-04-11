@@ -9,6 +9,5 @@ def run(args):
     print(f"Starting scanning on interface {args.interface}...")
     try:
         sniff(iface=args.interface, prn=packet_callback)
-
-    except KeyboardInterrupt:
-        exit()
+    except Exception as e:
+        print(f"Error: {e}")
