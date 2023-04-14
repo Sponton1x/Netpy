@@ -8,7 +8,7 @@ def run(args):
     try:
         ports_list = parse_ports(args.ports)
     except Exception as e:
-        print(e)
+        print(f"Error >> {e}")
         sys.exit()
 
     for port in ports_list:
@@ -17,7 +17,7 @@ def run(args):
         try:
             result = sock.connect_ex((args.target, port))
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Error >> {e}")
             sys.exit()
         if result == 0:
             print(f'Port {port} is open')

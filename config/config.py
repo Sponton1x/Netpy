@@ -1,6 +1,9 @@
 #! usr/bin/python3
+# config.py
+
 import time
 import sys
+import os
 
 class NetpyConfig:
     VERSION = '1.0.0'
@@ -19,3 +22,14 @@ def load_animation():
          sys.stdout.write(s)
          sys.stdout.flush()
          time.sleep(0.1)
+
+def import_modules():
+    module_dir = "modules"
+    for filename in os.listdir(module_dir):
+        if filename.endswith(".py"):
+            module_name = filename[:-3]
+            try:
+                __import__(f"{module_dir}.{module_name}")
+            except Exception as e:
+                print(f"Error during loading modules >> {e}")
+                sys.exit()

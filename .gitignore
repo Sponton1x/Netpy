@@ -1,6 +1,9 @@
 # ignore ALL .log files
 *.log
+/.git
 
 # ignore ALL files in ANY directory named temp
 temp/
 /modules/__pycache__/
+/config/__pycache__/
+/example/__pycache__
