@@ -4,6 +4,13 @@
 
 # ignore ALL files in ANY directory named temp
 temp/
-/modules/__pycache__/
-/config/__pycache__/
-/example/__pycache__
+venv/
+.idea/
+.github/
+.pytest_cache/
+tests/__pycache__/
+tests/.pytest_cache/
+src/modules/__pycache__/
+src/configuration/__pycache__/
+src/other/__pycache__/
+src/database/
