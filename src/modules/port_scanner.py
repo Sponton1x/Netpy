@@ -1,11 +1,24 @@
 #! usr/bin/python3
 # port_scanner.py
 
-import socket, sys
+import socket, sys, json
+import requests
 from configuration.config import configurationObject
 from other.parsing import parse_ports
 
+
 class TcpScanner:
+
+    def sendData(self, results):
+        api_url = 'http://localhost:5000'
+        headers = {"Content-Type": "application/json"}
+        results_not_list = ' '.join(str(x) for x in results)
+        response = requests.post(api_url, data=json.dumps(results_not_list), headers=headers)
+        if response.status_code == 200:
+            print('Data sent successfully')
+        else:
+            print('Failed to send data')
+
     def scan(self, target: str, ports: str, report):
         print(f'Scanning ports {ports} on {target}')
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,6 +31,7 @@ class TcpScanner:
             return
 
         results = []
+
 
         for port in ports_list:
             try:
@@ -44,8 +58,8 @@ class TcpScanner:
             configurationObject.generate_json("report.json", results)
             print("Report generated")
 
+        self.sendData(results)
         return results
-
 
 class UdpScanner:
     def scan(self, target, ports, report):

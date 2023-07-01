@@ -12,7 +12,7 @@ The scripts were written by me. I used python3 and libraries like socket, argpar
 
 ## Features
 * SSH Brute-force
-* Network Topologu
+* Network Topology
 * Monitor
 * Port Scanner
 * Sniffer
@@ -22,6 +22,7 @@ The scripts were written by me. I used python3 and libraries like socket, argpar
 * Argparse
 * Scapy
 * Socket
+* Flask
 
 ## Instalation
     git clone https://github.com/Sponton1x/Netpy
